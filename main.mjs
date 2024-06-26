@@ -1,7 +1,12 @@
 import cowsay from "cowsay";
 
+function createText(name) {
+  return `Hello, ${name}!`;
+}
+
 async function main() {
-  console.log(cowsay.say({ text: "hello world" }));
+  let temp = createText("World");
+  console.log(cowsay.say({ text: temp }));
 }
 
 await main();
